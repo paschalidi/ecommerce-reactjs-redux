@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import BasketCardsRenderer from '../../containers/BasketCardsRenderer'
 
 class NavigationBar extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -17,6 +18,9 @@ class NavigationBar extends React.Component { // eslint-disable-line react/prefe
             <li><img className="center" src={logo} /></li>
           </ul>
         </div>
+          <span className="header-cart">
+            <BasketCardsRenderer />
+          </span>
 
         <div className="header-row">
           <ul>
