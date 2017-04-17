@@ -1,0 +1,58 @@
+/*
+ *
+ * {{properCase name }}
+ *
+ */
+
+import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
+{{#if wantHeaders}}
+import Helmet from 'react-helmet';
+{{/if}}
+{{#if wantMessages}}
+import { FormattedMessage } from 'react-intl';
+{{/if}}
+{{#if wantActionsAndReducer}}
+import * as actions from './actions'
+{{/if}}
+{{#if wantMessages}}
+import messages from './messages';
+{{/if}}
+
+export class {{ properCase name }} extends React.{{{ component }}} { // eslint-disable-line react/prefer-stateless-function
+  render() {
+    return (
+      <div>
+      {{#if wantHeaders}}
+        <Helmet
+          title="{{properCase name}}"
+          meta={{curly true}}[
+            {{curly true}} name: 'description', content: 'Description of {{properCase name}}' {{curly}},
+          ]{{curly}}
+        />
+      {{/if}}
+      {{#if wantMessages}}
+        <FormattedMessage {...messages.header} />
+      {{/if}}
+      </div>
+    );
+  }
+}
+
+{{ properCase name }}.propTypes = {
+};
+
+{{#if wantActionsAndReducer}}
+function mapStateToProps(state){
+  //const {} = this.state;
+  return {
+
+  }
+}
+{{/if}}
+
+{{#if wantActionsAndReducer}}
+export default connect(mapStateToProps, actions)({{ properCase name }});
+{{else}}
+export default connect(null, actions)({{ properCase name }});
+{{/if}}
