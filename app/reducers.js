@@ -8,6 +8,7 @@ import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
 
 import ShoppingCardsReducer from './containers/ShoppingCardsRenderer/reducer'
+import BasketCardsReducer from './containers/BasketCardsRenderer/reducer'
 
 /*
  * routeReducer
@@ -44,6 +45,7 @@ export default function createReducer(asyncReducers) {
   return combineReducers({
     route: routeReducer,
     ShoppingCardsReducer,
+    BasketCardsReducer,
     ...asyncReducers,
   });
 }
