@@ -24,7 +24,7 @@ Containers :
                       inside the basket. (we are gonna refer to this state as BasketCardReducer).
     
   * BasketCardRenderer : takes the redux state of all the items that are being added into the basket (meaning the BasketCardReducer state)
-    *BasketCard : dispatches the action ADD_ITEM 
+    * BasketCard : dispatches the action ADD_ITEM 
                   that is being responsible for calling the action creator deleteItem(key).
                   deleteItem(key) is connected to the reducer that keeps track of all the data that are 
                   inside the basket. (we are gonna refer to this state as BasketCardReducer).
