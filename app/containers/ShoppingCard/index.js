@@ -8,6 +8,8 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import * as actions from './actions'
 
+import Prices from '../../components/Prices'
+
 export class ShoppingCard extends React.Component { // eslint-disable-line react/prefer-stateless-function
   handleItemAddition() {
     this.props.addItem(this.props.item)
@@ -47,6 +49,9 @@ export class ShoppingCard extends React.Component { // eslint-disable-line react
           </div>
           <div className="card-details">
             <p className="card-text-container">{title}</p>
+            <Prices originalPrice={originalPrice}
+                    discountedPrice={discountedPrice}
+                    isDiscount={isDiscount} />
           </div>
         </div>
       </div>
