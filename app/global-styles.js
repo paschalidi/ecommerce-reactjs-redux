@@ -783,7 +783,7 @@ label {
 .logo {
   float: left;
 }
-.navigation-container {
+.header-row {
   width: auto;
   margin: 0 auto;
   height: auto;
